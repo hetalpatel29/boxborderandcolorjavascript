@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>boxborder</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        
+        .maindivision {
+            margin: auto;
+            height: 550px;
+            width: 500px;
+            border: 2px solid gray;
+            margin-top: 50px;
+        }
+        
+        .textbox {
+            height: 40px;
+            width: 200px;
+            background-color: rgba(128, 128, 128, 0.137);
+            border: 1px solid gray;
+            text-align: center;
+            float: right;
+            margin-right: 20px;
+        }
+        
+        .heading {
+            margin-left: 30px;
+        }
+        
+        button {
+            height: 40px;
+            width: 150px;
+            background-color: darkcyan;
+            text-align: center;
+            color: white;
+            border: none;
+            margin-left: 170px;
+            margin-top: 20px;
+            font-size: 15px;
+            font-weight: bold;
+            border-radius: 2px;
+        }
+        
+        .box {
+            height: 150px;
+            width: 300px;
+            margin: auto;
+            background-color: black;
+            margin-top: 20px;
+            border: 4px solid blanchedalmond;
+        }
+        
+        .textdevision {
+            width: 100%;
+            height: 75px;
+            margin-top: 20px;
+            text-align: center;
+            vertical-align: middle;
+            line-height: 5px;
+        }
+        
+        .p {
+            float: left;
+            font-size: 20px;
+            color: teal;
+            font-weight: bold;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="maindivision">
+
+        <div class="textdevision">
+            <p class=" p">Enter Any Background color </p><input type="color" class="textbox" id="color"></div>
+
+        <div class="textdevision">
+            <p class="p">Enter Any Border color </p><input type="color" class="textbox" id="bordercolor"> </div>
+        <div class="textdevision">
+            <p class="p">Enter Border width </p> <input type="txt" class="textbox" id="borderwidth"></div>
+
+
+
+
+        <button type="button" onclick="buttonclick()">CLICK ME</button>
+        <div class="box" id="box"></div>
+    </div>
+    <script>
+        function buttonclick() {
+            let colors = document.getElementById("color");
+            let bordercolors = document.getElementById("bordercolor");
+            let borderwidth = document.getElementById("borderwidth");
+
+
+            let frame = document.getElementById("box");
+            document.getElementById("box").style.backgroundColor = colors.value;
+            document.getElementById("box").style.borderColor = bordercolors.value;
+            document.getElementById("box").style.borderWidth = borderwidth.value;
+
+
+
+
+        }
+    </script>
+
+
+</body>
+
+</html>
